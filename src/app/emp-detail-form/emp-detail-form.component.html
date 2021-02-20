@@ -1,0 +1,188 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <title> Responsive Registration Form | CodingLab </title> -->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+<body>
+
+  <div class="container">
+     <div class="title">Employee Details</div>
+     {{empDetailModel.value|json}} 
+      <div class="content">
+        <form [formGroup]="empDetailModel"   novalidate  action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Employee Id </span>
+              <input type="text" id="empId" formControlName="empId" required>
+           </div>
+ 
+            <div class="input-box">
+              <span class="details">First Name </span>
+              <input type="text" id="firstname" name="firstname" formControlName="firstname">
+            </div>
+            <div class="input-box">
+              <span class="details">Middle Name </span>
+              <input type="text" id="middlename" name="middlename" formControlName="middlename">
+            </div>
+            <div class="input-box">
+              <span class="details">Last Name </span>
+              <input type="text" id="lastname" name="lastname" formControlName="lastname">
+            </div>
+            <div class="input-box">
+              <span class="details">Designation</span>
+              <input type="text" id="designation" name="designation" formControlName="designation">
+            </div>
+            <div class="input-box"></div>
+            <div class="input-box"></div>
+            <div class="input-box"></div>
+            <div class="input-box">
+              <span class="details">Temporery Address Line 1</span>
+              <input type="text" id="addressl1" name="addressl1" formControlName= "addressl1">
+            </div>
+
+            <div class="input-box">
+              <span class="details">Temporery Address Line 2</span>
+              <input type="text" id="addressl2" name="addressl2" formControlName="addressl2">
+            </div>
+
+            <div class="input-box">
+              <span class="details">Pin Code</span>
+              <input type="number" id="pincode" name="pincode" formControlName="pincode">
+            </div>
+
+            <div class="input-box"></div>
+
+            <div class="input-box">
+              <span class="details">country</span>
+              <select name="cars" id="cars"></select>
+            </div>
+            <div class="input-box">
+              <span class="details">State</span>
+              <select name="cars" id="cars"></select>
+            </div>
+            <div class="input-box">
+              <span class="details">City</span>
+              <select name="cars" id="cars"></select>
+            </div>
+
+            <div class="input-box"></div>
+            
+            <div class="input-box">
+              <span class="details">Offer Letter Date</span>
+              <input type="date" id="offerLetterDate" name="offerLetterDate" formControlName="offerLetterDate">
+            </div>
+           <div class="input-box">
+              <span class="details">Joining Date</span>
+              <input type="date" id="joiningDate" name="joiningDate" formControlName="joiningDate">
+           </div>
+           <div class="input-box">
+              <span class="details"> Last Working Day</span>
+              <input type="date" id="lastWorkingDay" name="lastworkingday" formControlName="lastworkingday">
+           </div>
+           <div class="input-box">
+              <span class="details">Reporting Manager </span>
+              <input type="text" id="reportingmanager" name="reportingmanager" formControlName="reportingmanager">
+           </div>
+           <div class="input-box">
+              <span class="details">Increament Done</span>
+              <input type="checkbox" id="isincreamentdone" name="isincreamentdone" formControlName="isincreamentdone">
+            </div>
+           <div class="input-box">
+              <span class="details">Last Drawn Salary</span>
+              <input type="number" id="lastSalaryDrawn" name="lastSalaryDrawn" formControlName="lastSalaryDrawn">
+           </div>
+ 
+              <button type="submit" (click)="saveData(empDetailModel.value)">submit</button>
+        
+        </div>
+      </form>
+    </div>
+  </div>
+</body> 
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h6>--------------------------------------------------------------------------------------------</h6>
+
+
+
+
+
+<form>
+ 
+<div>
+        <label for="EmployeeId">Employee Id </label>
+        <input type="text" id="EmpId" name="Employee Id">
+</div>
+ <p>
+    <label for="firstname">First Name </label>
+    <input type="text" id="firstname" name="firstname">
+  </p>
+  <p>
+    <label for="lastname">Middle Name </label>
+    <input type="text" id="lastname" name="lastname">
+  </p>
+
+  <p>
+    <label for="lastname">Last Name </label>
+    <input type="text" id="lastname" name="lastname">
+  </p>
+ 
+  <p>
+    <label for="designation">Designation</label>
+    <input type="text" id="designation" name="designation">
+  </p>
+  <p>
+      <label for="OfferLetterDate">Offer Letter Date</label>&nbsp;
+      <input type="date" id="offerLetterDate" name="offerLetterDate">
+  </p>
+  <p>
+    <label for="joiningDate">Joining Date</label>&nbsp;
+    <input type="date" id="joiningDate" name="joiningDate">
+  </p>
+  <p>
+      <label for="lastworkingday"> Last Working Day</label>&nbsp;
+      <input type="date" id="lastWorkingDay" name="lastworkingday">
+  </p>
+  <p>
+    <label for="reportingmanager">Reporting Manager </label>
+    <input type="text" id="reportingmanager" name="reportingmanager">
+  </p>
+  <p>
+      <label for="isincreamentdone">Increament Done</label>
+      <input type="checkbox" id="isincreamentdone" name="isincreamentdone">
+  </p>
+  <p>
+      <label for="lastSalaryDrawn">Last Drawn Salary</label>
+      <input type="number" id="lastSalaryDrawn" name="lastSalaryDrawn">
+  </p>
+
+ 
+  <p>
+    <label for="country">country </label>
+    <select id="country" name="country">
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select>
+  </p>
+ 
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+ 
+</form> -->
+
