@@ -1,0 +1,131 @@
+<div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <title> Responsive Registration Form | CodingLab </title> -->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+<body  >
+  <div class="container">
+    <div class="title">Employee Details</div>
+     <!-- {{empDetailModel.value|json}}  -->
+     {{employeeInfo.data|json}}
+      <div class="content">
+          <div class="user-details" >
+            <div >
+                <button type="submit" (click)="getEmployeeDetails()">Get Details</button>
+                <!-- <h2>{{employeeInfo?.data|json}}</h2> -->
+                <table>
+                  <tr>
+                     <th>ID</th>
+                     <th>Email</th>
+                     <th>first_name</th>
+                     <th>last_name</th>
+                     <th>avatar</th>
+                  </tr>
+                  <tr *ngIf="employeeInfo">
+                   
+                    <td>{{employeeInfo.id}}</td>
+                     <td>{{employeeInfo.email}}</td>
+                    <!-- <td>{{emp.first_name}}</td>
+                    <td>{{emp.last_name}}</td> -->
+ 
+                  </tr>
+                </table>
+
+            </div>
+ 
+            
+             <!-- <h1>name:{{employeeInfo.id}}</h1>  -->
+        </div>
+      
+    </div>
+  </div>
+  
+</body> 
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h6>--------------------------------------------------------------------------------------------</h6>
+
+
+
+
+
+<form>
+ 
+<div>
+        <label for="EmployeeId">Employee Id </label>
+        <input type="text" id="EmpId" name="Employee Id">
+</div>
+ <p>
+    <label for="firstname">First Name </label>
+    <input type="text" id="firstname" name="firstname">
+  </p>
+  <p>
+    <label for="lastname">Middle Name </label>
+    <input type="text" id="lastname" name="lastname">
+  </p>
+
+  <p>
+    <label for="lastname">Last Name </label>
+    <input type="text" id="lastname" name="lastname">
+  </p>
+ 
+  <p>
+    <label for="designation">Designation</label>
+    <input type="text" id="designation" name="designation">
+  </p>
+  <p>
+      <label for="OfferLetterDate">Offer Letter Date</label>&nbsp;
+      <input type="date" id="offerLetterDate" name="offerLetterDate">
+  </p>
+  <p>
+    <label for="joiningDate">Joining Date</label>&nbsp;
+    <input type="date" id="joiningDate" name="joiningDate">
+  </p>
+  <p>
+      <label for="lastworkingday"> Last Working Day</label>&nbsp;
+      <input type="date" id="lastWorkingDay" name="lastworkingday">
+  </p>
+  <p>
+    <label for="reportingmanager">Reporting Manager </label>
+    <input type="text" id="reportingmanager" name="reportingmanager">
+  </p>
+  <p>
+      <label for="isincreamentdone">Increament Done</label>
+      <input type="checkbox" id="isincreamentdone" name="isincreamentdone">
+  </p>
+  <p>
+      <label for="lastSalaryDrawn">Last Drawn Salary</label>
+      <input type="number" id="lastSalaryDrawn" name="lastSalaryDrawn">
+  </p>
+
+ 
+  <p>
+    <label for="country">country </label>
+    <select id="country" name="country">
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select>
+  </p>
+ 
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+ 
+</form> -->
+

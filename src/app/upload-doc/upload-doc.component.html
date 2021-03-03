@@ -1,1 +1,76 @@
-<p>upload-doc works!</p>
+ 
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="UTF-8">
+       
+      
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+  
+  
+  <body>
+  
+    <div class="container">
+       <div class="title">Upload Documents</div>
+       {{uploaddocModel.value|json}} 
+        <div class="content">
+          <form   [formGroup]="uploaddocModel"  novalidate  action="#">
+            <div class="user-details">
+              <div  class="input-box">
+                <span class="details">Photo </span>
+                <input type="file" id="photo" formControlName="photo" >
+             </div>
+   
+              <div class="input-box" >
+                <span class="details">Pan Card </span>
+                <input type="file" id="pancard" name="pancard" formControlName="pancard">
+              </div>
+              <div class="input-box">
+                <span class="details">Adhar Card </span>
+                <input type="file" id="aadharcard" name="aadharcard" formControlName="aadharcard">
+              </div>
+              <div class="input-box">
+                <span class="details">Offer Letter </span>
+                <input type="file" id="offerletter" name="offerletter" formControlName="offerletter">
+              </div>
+              <div class="input-box">
+                <span class="details">Experience Letter</span>
+                <input type="file" id="expletter" name="expletter" formControlName="expletter">
+              </div>
+               
+              <div class="input-box">
+                <span class="details">Increament Letter</span>
+                <input type="file" id="Incrmntletter" name="Incrmntletter" formControlName= "Incrmntletter">
+              </div>
+  
+              <div class="input-box">
+                <span class="details"> Salary Slip</span>
+                <input type="file" id="salaryslip" name="salaryslip" formControlName="salaryslip">
+              </div>
+              <div class="input-box">
+                <span class="details"> HSC/Diploma Certificate</span>
+                <input type="file" id="hsccertificate" name="hsccertificate" formControlName="hsccertificate">
+              </div>
+              <div class="input-box" >
+                <span class="details"> Degree Certificate</span>
+                <input type="file" id="degreecertificate" name="degreecertificate" formControlName="degreecertificate">
+              </div>
+              <div class="input-box" >
+                <span class="details"> Degree MarksSheet </span>
+                <input type="file" id="degreemarksht" name="degreemarksht" formControlName="degreemarksht">
+              </div>  
+              <div class="input-box" >
+                 
+                <div class="button">
+                <button type="submit"(click)="saveDocuments(uploaddocModel.value)" >Upload </button>
+                </div>
+              </div>
+                
+                <!--  -->
+          
+          </div>
+        </form>
+      </div>
+    </div>
+  </body> 
+  
