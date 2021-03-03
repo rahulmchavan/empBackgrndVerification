@@ -16,19 +16,19 @@ export class EmpDetailFormComponent implements OnInit {
 
     this.empDetailModel=new FormGroup({
     empId: new FormControl('',[Validators.required]),
-    firstname: new FormControl(),
-    middlename: new FormControl(),
-    lastname: new FormControl(),
+    firstName: new FormControl(),
+    middleName: new FormControl(),
+    surname: new FormControl(),
     designation: new FormControl(),
     addressl1: new FormControl(),
     addressl2: new FormControl(),
     pincode: new FormControl(),
     offerLetterDate: new FormControl(),
     joiningDate: new FormControl(),
-    lastworkingday: new FormControl(),
-    reportingmanager: new FormControl(),
-    isincreamentdone: new FormControl(),
-    lastSalaryDrawn: new FormControl()
+    lastWorkingDate: new FormControl(),
+    reportingManager: new FormControl(),
+    incrementDone: new FormControl(),
+    lastDrawnsalary: new FormControl()
   })
    }
 

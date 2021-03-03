@@ -22,15 +22,15 @@
  
             <div class="input-box">
               <span class="details">First Name </span>
-              <input type="text" id="firstname" name="firstname" formControlName="firstname">
+              <input type="text" id="firstname" name="firstName" formControlName="firstName">
             </div>
             <div class="input-box">
               <span class="details">Middle Name </span>
-              <input type="text" id="middlename" name="middlename" formControlName="middlename">
+              <input type="text" id="middlename" name="middleName" formControlName="middleName">
             </div>
             <div class="input-box">
               <span class="details">Last Name </span>
-              <input type="text" id="lastname" name="lastname" formControlName="lastname">
+              <input type="text" id="lastname" name="surname" formControlName="surname">
             </div>
             <div class="input-box">
               <span class="details">Designation</span>
@@ -81,19 +81,19 @@
            </div>
            <div class="input-box">
               <span class="details"> Last Working Day</span>
-              <input type="date" id="lastWorkingDay" name="lastworkingday" formControlName="lastworkingday">
+              <input type="date" id="lastWorkingDay" name="lastworkingday" formControlName="lastWorkingDate">
            </div>
            <div class="input-box">
               <span class="details">Reporting Manager </span>
-              <input type="text" id="reportingmanager" name="reportingmanager" formControlName="reportingmanager">
+              <input type="text" id="reportingmanager" name="reportingmanager" formControlName="reportingManager">
            </div>
            <div class="input-box">
               <span class="details">Increament Done</span>
-              <input type="checkbox" id="isincreamentdone" name="isincreamentdone" formControlName="isincreamentdone">
+              <input type="checkbox" id="isincreamentdone" name="isincreamentdone" formControlName="incrementDone">
             </div>
            <div class="input-box">
               <span class="details">Last Drawn Salary</span>
-              <input type="number" id="lastSalaryDrawn" name="lastSalaryDrawn" formControlName="lastSalaryDrawn">
+              <input type="number" id="lastSalaryDrawn" name="lastSalaryDrawn" formControlName="lastDrawnsalary">
            </div>
  
               <button type="submit" (click)="saveData(empDetailModel.value)">submit</button>
