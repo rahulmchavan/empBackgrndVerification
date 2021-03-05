@@ -1,5 +1,20 @@
 body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    // background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(200deg, #71b7e6, #9b59b6);
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 .emp-profile{
     padding: 3%;

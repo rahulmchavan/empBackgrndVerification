@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { myroute } from './route.config';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { SignOutComponent } from './sign-out/sign-out.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { EmployeeProfileComponent } from './employee-profile/employee-profile.co
     ErrorComponent,
     EmployeeDetailComponent,
     EmployeeProfileComponent,
+    SignOutComponent,
+    SignUpComponent,
     
     
     

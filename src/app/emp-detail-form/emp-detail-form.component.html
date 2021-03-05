@@ -8,10 +8,11 @@
 
 
 <body>
-
+  
   <div class="container">
      <div class="title">Employee Details</div>
      {{empDetailModel.value|json}} 
+     
       <div class="content">
         <form [formGroup]="empDetailModel" novalidate  action="#">
           <div class="user-details">
@@ -58,17 +59,18 @@
 
             <div class="input-box">
               <span class="details">country</span>
-              <select name="cars" id="cars"></select>
+              <select  *ngFor="let cntry of countryname"> </select>
             </div>
+            
             <div class="input-box">
               <span class="details">State</span>
               <select name="cars" id="cars"></select>
             </div>
             <div class="input-box">
               <span class="details">City</span>
-              <select name="cars" id="cars"></select>
+              <select *ngFor="let c of cityname"></select>
             </div>
-
+            {{countryname|json}}
             <div class="input-box"></div>
             
             <div class="input-box">
